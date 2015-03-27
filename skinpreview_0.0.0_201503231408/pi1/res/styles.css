@@ -1,0 +1,87 @@
+body {
+	margin-top: 130px!important;
+}
+
+.skinSelectorWrapper {
+	padding: 5px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	height: 90px;
+	background-color: rgb(51, 51, 51);
+	background-color: rgba(51, 51, 51, 0.9);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	font-family: Helvetica, Arial;
+}
+
+.skinSelectorWrapper .skinSelectorError {
+	color: #ff0000;
+	font-size:16px;
+	margin-top:27px;
+	text-align: center;
+	height:20px;
+}
+.skinSelector table, .skinSelector table tr, .skinSelector table td, .skinSelector input {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	background: transparent;
+	border-radius: 0px;
+	box-shadow: 5px 5px 2px #101010;
+}
+.skinSelector input{
+	width: 130px;
+	height: 73px;
+}
+
+.skinSelector {
+	height: 110px;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+.skinSelector input.skinSelectorItem {
+	border: 3px solid black;
+	width: 130px;
+	height: 73px;
+}
+skinSelectorItemWrapper .skinSelectorItemSelected {
+	border-color: greenyellow;
+}
+.skinSelector table td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.skinSelectorForm {
+	position: relative;
+	display: block;
+}
+.skinSelectorItemWrapper .skinSelectorSelection {
+	position:absolute;
+	top:30px;
+	margin-left:5px;
+	width:54px;
+	height:47px;
+	background-image: url(selectorImages/template-selector-notselected.png);
+}
+
+.skinSelectorItemWrapper .skinSelectorTitle {
+	position:absolute;
+	top:10px;
+	margin-left:45px;
+	margin-right:5px;
+	padding:5px;
+	background-color: rgba(150,150,150,0.7);
+	color:white;
+}
+
+.skinSelectorItemWrapper:hover .skinSelectorSelection, .skinSelectorItemWrapper:hover .skinSelectorTitle {
+	display: none;
+}
+
+.skinSelectorItemWrapper .skinSelectorItemSelected .skinSelectorSelection {
+	background-image: url(selectorImages/template-selector-selected.png);
+}

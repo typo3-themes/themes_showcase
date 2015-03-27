@@ -1,0 +1,2 @@
+# cat=templates/basic; type=text; label=List of allowed root pages, the preview mechanism will be enabled on all pages below the ones listed here, but the switcher must be included with a template manually.
+allowedRootPages =

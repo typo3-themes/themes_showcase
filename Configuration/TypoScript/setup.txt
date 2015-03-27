@@ -1,0 +1,12 @@
+tt_content.list.20.themesshowcase_themesshowcase.settings.skinsToHide = {$plugin.tx_themes_showcase.hiddenSkins}
+page.1000 < tt_content.list.20.themesshowcase_themesshowcase
+
+page {
+    includeCSS {
+        9978465 = EXT:themes_showcase/Resources/Public/Stylesheet/themeselector.less
+        9978465 {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+    }
+}

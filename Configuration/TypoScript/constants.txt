@@ -1,0 +1,2 @@
+# cat=Skin Preview/general//; type=string; label= hide skins in preview
+plugin.tx_themes_showcase.hiddenSkins =

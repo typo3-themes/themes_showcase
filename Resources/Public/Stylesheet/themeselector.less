@@ -1,0 +1,97 @@
+
+@theme-selector-gray: #888888;
+@theme-selector-light:#EEEEEE;
+
+/* delete this part STOP */
+
+/* min size */
+
+.themes-showcase{
+
+  // Core variables and mixins
+  @import "Library/variables.less";
+  @import "Library/mixins.less";
+
+  // Reset and dependencies
+  // @import "Library/normalize.less";
+  // @import "Library/print.less";
+  // @import "Library/glyphicons.less";
+
+  @import "Library/grid.less";
+
+
+  position:fixed;
+  z-index: 9999999999999;
+  top: 0;
+  left: -500px;
+  background-color: transparent;
+  width: 464px; /* 250px + theme-btn */
+  height: 100vh;
+  transition: left 0.5s ease-in-out;
+  &:hover {
+    left: 0px;
+  }
+  .theme-wrap {
+    float: left;
+    background-color: #ffffff;
+    width: 250PX;
+    height: 100vh;
+    box-shadow: 2px 2px 4px @theme-selector-gray;
+  }
+  .theme-btn {
+    position:relative;
+    z-index: 99999999999999;
+    background-color: #ffffff;
+    left: 465px;
+    width: 64px;
+    height: 64px;
+    margin-top: 45vh;
+    padding: 16px;
+    background-image: url(../Images/logo_32x32.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 32px 32px 32px 32px;
+    box-shadow: 2px 2px 4px @theme-selector-gray;
+  }
+  .theme-header {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid @theme-selector-gray;
+    background-color: @theme-selector-gray;
+    font-weight: bold;
+    color: white;
+  }
+  .theme-list {
+    margin-left: 0;
+    width: 100%;
+    float: left;
+  }
+  ul {
+    width: 100%;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  li {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    border-bottom: 1px solid @theme-selector-gray;
+  }
+  li.active {
+    background-color: @theme-selector-light;
+  }
+
+  /* normal size */
+  @media (min-width: 768px) {
+    .theme-selector {
+      width: 564px; /* 500px + theme-btn */
+    }
+    .theme-wrap {
+      float: left;
+      width: 500PX;
+    }
+  }
+}
+

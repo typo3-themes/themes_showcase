@@ -1,0 +1,39 @@
+{namespace fcss = Tx_FluidCss_ViewHelpers}
+
+<link href="typo3conf/ext/skinpreview/pi1/res/styles.css" rel="stylesheet" type="text/css" />
+
+<div class="skinSelectorWrapper">
+	<!-- {currentSkin} -->
+	<div class="skinSelector">
+		<f:if condition="{skinpreviewAllowed}">
+			<f:then>
+				<table>
+					<tr>
+						<f:for each="{skins}" as="skin">
+							<f:if condition="{0:skin.key} != {0:'LOCAL:error'}">
+								<td class="skinSelectorItemWrapper">
+									<f:if condition="{skin.selected}">
+										<f:then>
+											<form action="{TYPO3_REQUEST_URL}" method="POST" class="skinSelectorForm skinSelectorItemSelected">
+										</f:then>
+										<f:else>
+											<form action="{TYPO3_REQUEST_URL}" method="POST" class="skinSelectorForm">
+										</f:else>
+									</f:if>
+										<input name="skinSelector" type="hidden" value="{skin.key}">
+										<input type="image" src="typo3/{skin.icon}" class="skinSelectorItem" />
+										<div class="skinSelectorSelection"></div>
+										<div class="skinSelectorTitle">{skin.title}</div>
+									</form>
+								</td>
+							</f:if>
+						</f:for>
+					</tr>
+				</table>
+			</f:then>
+			<f:else>
+				<p class="skinSelectorError">misconfigured, page and their rootpages are not allowed in extmgm conf ...</p>
+			</f:else>
+		</f:if>
+	</div>
+</div>

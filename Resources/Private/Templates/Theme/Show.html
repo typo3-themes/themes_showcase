@@ -1,0 +1,29 @@
+
+<div class="themes-showcase">
+	<div class="theme-wrap">
+		<div class="theme-header">
+			Themeselector
+		</div>
+
+		<div class="theme-list">
+
+			<ul class="theme-list">
+				<f:if condition="{selectedTheme}">
+					<f:render partial="Theme" arguments="{theme: selectedTheme, class:'active'}" />
+				</f:if>
+				<f:for each="{themes}" as="theme">
+					<f:if condition="{selectedTheme} == {theme}">
+						<f:then>
+
+						</f:then>
+						<f:else>
+							<f:render partial="Theme" arguments="{theme: theme, class:''}" />
+						</f:else>
+					</f:if>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+	<div class="theme-btn">
+	</div>
+</div> <!-- theme-selector -->
